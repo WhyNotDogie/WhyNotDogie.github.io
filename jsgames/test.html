@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <title>Pong test</title>
+    <title>bouncy ball</title>
     <style>
       * {
         padding: 0;
@@ -16,7 +16,7 @@
     </style>
   </head>
   <body>
-    <canvas onmousemove="showCoords(event)" id="canvas" width="480" height="320"></canvas>
+    <canvas id="canvas" width="480" height="320"></canvas>
 
     <script>
       // JavaScript code goes here
@@ -27,18 +27,8 @@
       const ballRadius = 10;
       let dx = 2;
       let dy = -2;
-      const paddleHeight = 10;
-      const paddleWidth = 75;
-      let paddleX = (canvas.width - paddleWidth) / 2;
-      function showCoords(event){
-          paddleX = ev.clientX()
-      }
       function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.beginPath();
-        ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
-        ctx.fillStyle = "green";
-        ctx.fill();
         ctx.closePath();
         ctx.beginPath();
         ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
