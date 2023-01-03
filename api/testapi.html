@@ -8,7 +8,11 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const possible = ["Test 1", "check check 123", "dude no way this works", "xd it works"];
+if urlParams.has("id") {
 const num = urlParams.get("id");
+} else {
+const num = math.floor(math.random()*possible.length)
+}
 var out = "{\"output\": [\""+possible[num]+"\"]}";
 document.getElementById("p1").innerHTML = out;
 </script>
