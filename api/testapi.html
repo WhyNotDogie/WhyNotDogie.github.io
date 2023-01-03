@@ -6,7 +6,8 @@
 
 <script>
 const possible = ["Test 1", "check check 123", "dude no way this works", "xd it works"];
-var out = "{\"output\": [\""+possible[Math.floor(Math.random() * possible.length)]+"\"]}";
+const num = urlParams.get('id');
+var out = "{\"output\": [\""+possible[num]+"\"]}";
 document.getElementById("p1").innerHTML = out;
 </script>
 
