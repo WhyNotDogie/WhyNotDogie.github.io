@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>bouncy ball</title>
     <style>
       * {
@@ -9,45 +9,23 @@
         margin: 0;
       }
       canvas {
-        background: #eee;
-        display: block;
-        margin: 0 auto;
+        background: rgb(30, 30, 30);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin: auto;
+        border: 2px blue";
       }
     </style>
   </head>
-  <body>
+  <body style="background-color:rgb(47, 47, 47);">
     <canvas id="canvas" width="480" height="320"></canvas>
 
     <script>
-      // JavaScript code goes here
       const canvas = document.getElementById("canvas");
       const ctx = canvas.getContext("2d");
-      let x = canvas.width / 2;
-      let y = canvas.height - 30;
-      const ballRadius = 10;
-      let dx = 3;
-      let dy = -3;
-      function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.closePath();
-        ctx.beginPath();
-        ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-        ctx.fillStyle = "#0095DD";
-        ctx.fill();
-        ctx.closePath();
-       if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
-  dx = -dx;
-}
-if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
-  dy = -dy;
-}
-      }
-      function move() {
-        x += dx;
-        y += dy;
-      }
-      setInterval(draw, 10);
-      setInterval(move,2);
     </script>
   </body>
 </html>
